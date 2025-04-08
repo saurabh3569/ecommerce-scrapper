@@ -36,15 +36,7 @@ cd nodejs-ecommerce-scraper
 npm install
 ```
 
-3. **Set up environment**
-
-Create a `.env` file in the root directory and add your MongoDB URI:
-
-```
-MONGODB_URI=mongodb://localhost:27017/scraperDB
-```
-
-4. **Run the server**
+3. **Run the server**
 
 ```bash
 node index.js
@@ -54,10 +46,10 @@ node index.js
 
 ## ⏰ Scheduled Scraping
 
-The scraper is scheduled to run every **15 seconds** using `node-schedule`. You can customize this cron expression in `index.js`:
+The scraper is scheduled to run every **1 hour** using `node-schedule`. You can customize this cron expression in `index.js`:
 
 ```js
-schedule.scheduleJob("*/15 * * * * *", scrapeProducts);
+schedule.scheduleJob("0 * * * * *", scrapeProducts);
 ```
 
 ---
